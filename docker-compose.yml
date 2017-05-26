@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:9.6-alpine
+    volumes:
+      - sql_test:/var/lib/postgresql/data
+
+  psql:
+    image: postgres:9.6-alpine
+    command: psql -h postgres -U postgres
+    depends_on:
+      - postgres
+
+volumes:
+  sql_test:
