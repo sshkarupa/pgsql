@@ -1,4 +1,4 @@
-# Play around with Postgresql
+# Play around with PostgreSQL
 
 Here's you can find a simple lightweight docker-compose file for PostgreSQL
 based on postgresql:9.6-alpine docker image.
