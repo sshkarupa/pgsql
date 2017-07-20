@@ -20,7 +20,7 @@ docker run -it --rm --link sql-test:postgres postgres:9.6-alpine psql -h postgre
 
 ### ... or via pgcli
 
-For using Postgres CLI (http://pgcli.com) you needed:
+For using Postgres CLI (http://pgcli.com) you need to:
 
 1) Install pgcli (see https://github.com/dbcli/pgcli)
 2) Run the following command
