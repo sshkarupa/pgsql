@@ -1,7 +1,7 @@
 # Play around with PostgreSQL
 
-Here's you can find some useful commands for running docker container with
-PostgreSQL and connect to it via `psql` or `pgcli`. You can use it for study
+Here you can find some useful commands for running PostgreSQL in Docker
+container and connect to it via `psql` or `pgcli`. You can use it for study
 PostgreSQL or whatever you want.
 
 ## How to use it
@@ -28,20 +28,17 @@ For using Postgres CLI (http://pgcli.com) you needed:
 $ pgcli -h localhost -p 5432 -U postgres
 ```
 
-Don't forget to stop docker container after your work will be finished:
+Don't forget to stop docker container when your work is finished:
 
 ```
 $ docker stop $(docker ps -a -q)
 ```
 
-## Using Makefile
+### using Makefile
 
-For simplicity running the commands above you can just run the following:
-
-* `make psql`
-* `make pgcli`
-* `make stop`
+Instead of commands above you can simply run: `make psql`, `make pgcli` or
+`make stop`
 
 ## Dependencies
 
-Before starting, you’ll need to have Docker installed
+Before starting, you need to have Docker installed
