@@ -11,7 +11,7 @@ postgres:
 	docker run --rm --name $(APP_NAME) -v $(VOLUME_NAME):/var/lib/postgresql/data -p 5432:5432 -d postgres:9.6-alpine
 
 run_psql:
-	docker run -it --rm --link $(APP_NAME):postgres postgres:9.6-alpine psql -h postgres -U postgres
+	docker exec -it $(APP_NAME) psql -U postgres
 
 run_pgcli:
 	pgcli -h localhost -p 5432 -U postgres

@@ -9,13 +9,13 @@ PostgreSQL or whatever you want.
 ### start a postgres instance
 
 ```
-docker run --rm --name sql-test -v sql_test:/var/lib/postgresql/data -p 5432:5432 -d postgres:9.6-alpine
+docker run --rm --name sql-test -v sql_test:/var/lib/postgresql/data -p 5433:5432 -d postgres:10-alpine
 ```
 
 ### connect to it via psql
 
 ```
-docker run -it --rm --link sql-test:postgres postgres:9.6-alpine psql -h postgres -U postgres
+docker exec -it sql-test psql -U postgres
 ```
 
 ### ... or via pgcli
