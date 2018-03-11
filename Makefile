@@ -8,7 +8,7 @@ psql: postgres run_psql
 pgcli: postgres run_pgcli
 
 postgres:
-	docker run --rm --name $(APP_NAME) -v $(VOLUME_NAME):/var/lib/postgresql/data -p 5432:5432 -d postgres:9.6-alpine
+	docker run --rm --name $(APP_NAME) -v $(VOLUME_NAME):/var/lib/postgresql/data -p 5432:5432 -d postgres:10-alpine
 
 run_psql:
 	docker exec -it $(APP_NAME) psql -U postgres
